@@ -7,8 +7,7 @@ block content
   div(class="row")
    each r,index  in results 
     div(class="col-sm-2" onclick =`buy(${index})`) #{r.name}, #{r.No_of_songs}, #{r.type}
-    script.
-        function buy(a)
-        {
-            alert(`You purchased Item ${a+1}`)
-        }
+  script.
+    function buy(index) {
+      alert(`You purchased item ${index+1}.`);
+    }
